@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevora Exports | Premium Natural Products from India</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Logo Row -->
+    <header class="logo-row">
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="Nuevora Exports Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Green Header Row -->
+    <header class="main-header">
+        <h1>Nuevora Exports</h1>
+        <p>Your trusted partner in premium quality, naturally sourced products from India.</p>
+    </header>
+    
+    <div class="container">
+        <section class="about scroll-animate" id="about">
+            <h2 class="section-title scroll-animate">About Us</h2>
+            <p>
+                At <span class="highlight">Nuevora Exports</span>, we specialize in exporting <b>Cold-Pressed Virgin Coconut Oil</b> and <b>Rich Mango Pulp</b>, bringing the best of nature's goodness to international markets. Rooted in a commitment to <b>purity</b>, <b>sustainability</b>, and <b>excellence</b>, we ensure every product meets global food safety standards and exceeds customer expectations.
+                <br><br>
+                We are actively expanding our product portfolio to include a wider range of high-quality exports. We work closely with <b>trusted partners</b>, use <b>food-grade packaging</b>, and maintain <b>strict quality control</b> from sourcing to shipment. Whether you are a <b>wholesaler</b>, <b>importer</b>, or <b>food manufacturer</b>, Nuevora Exports is here to supply you with <b>pure</b>, <b>reliable</b>, and <b>value-added products</b> that stand out in international markets.
+            </p>
+        </section>
+
+        <section class="products scroll-animate" id="products">
+            <div class="product scroll-animate">
+                <img src="coconut.jpeg" alt="Virgin Coconut Oil">
+                <h3>Cold-Pressed Virgin Coconut Oil</h3>
+                <p>
+                    Extracted from the freshest coconuts using cold-pressed technology, our virgin coconut oil preserves natural aroma, nutrients, and health benefits. Perfect for <b>culinary</b>, <b>cosmetic</b>, and <b>wellness</b> applications.
+                </p>
+            </div>
+            <div class="product scroll-animate">
+                <img src="mango.jpeg" alt="Mango Pulp">
+                <h3>Rich Mango Pulp</h3>
+                <p>
+                    Made from handpicked, fully ripened Indian mangoes—especially <b>Alphonso</b> and <b>Totapuri</b> varieties—our pulp is processed hygienically to retain its rich taste, color, and texture.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modern Contact Us Visual Section -->
+    <section class="contact-visual scroll-animate">
+      <div class="contact-visual-content">
+        <div class="contact-visual-details scroll-animate">
+          <h2>Contact Us</h2>
+          <div class="contact-visual-grid">
+            <div class="scroll-animate">
+              <p class="contact-label">Address</p>
+              <p class="contact-info">
+                Uruwala Tea Estate,<br>
+                Akuressa,10450 Sri Lanka
+              </p>
+              <p class="contact-label">Email</p>
+              <p class="contact-info">nuevoraexports@gmail.com</p>
+            </div>
+            <div class="scroll-animate">
+              <p class="contact-label">Phone</p>
+              <p class="contact-info">91+ 8124318717 / 91+ 7904267429 </p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-visual-image scroll-animate">
+          <img src="world.jpeg" alt="Global reach" />
+    
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Nuevora Exports. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.scroll-animate');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        elements.forEach(el => observer.observe(el));
+    });
+    </script>
+</body>
+</html>
