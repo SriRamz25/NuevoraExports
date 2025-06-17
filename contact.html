@@ -61,16 +61,39 @@
   font-weight: 400;
 }
       .contact-container {
-        max-width: 900px;
-        margin: 48px auto 80px auto;
-        background: #fff;
-        border-radius: 18px;
-        /* Removed box-shadow to eliminate shadow at bottom */
-        box-shadow: none;
-        padding: 36px 32px 48px 32px;
-      }
+  position: relative; /* Required for pseudo-element positioning */
+  max-width: 900px;
+  margin: 48px auto 80px auto;
+  background: none; /* Remove direct background image */
+  border-radius: 18px;
+  box-shadow: none;
+  padding: 36px 32px 48px 32px;
+  color: #fff; /* optional: improves contrast if background is dark */
+  overflow: hidden; /* Ensures blur doesn't spill out */
+}
+
+/* Add this for the blurred background image */
+.contact-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url('contaaaactus.jpeg') no-repeat center center;
+  background-size: cover;
+  filter: blur(3px); /* Adjust the blur strength as needed */
+  opacity: 2;     /* Adjust opacity for desired effect */
+  border-radius: 18px;
+}
+
+/* Make sure your content stays above the blurred background */
+.contact-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+
       h2 {
-        color: #0d8f80;
+        color: #054841;
         font-size: 2.2em;
         margin-bottom: 24px;
         text-align: center;
