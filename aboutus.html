@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | Nuevora Exports</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        background: #f9f9f9;
+      }
+      .main-header {
+  position: relative;
+  background: #054841;
+  color: #fff;
+  padding: 24px 0;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-wrapper {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.logo {
+  height: 170px;
+  width: auto;
+  border-radius: 20px;
+  background: transparent;
+  box-shadow: none !important;
+  margin: 0;
+}
+
+.header-text {
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2.3em;
+  letter-spacing: 2px;
+}
+
+.header-text p {
+  margin-top: 12px;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+      .about-hero {
+        background: #0d8f80;
+        padding: 48px 0 32px 0;
+        text-align: center;
+        border-radius: 0 0 40px 40px;
+        box-shadow: 0 4px 32px rgba(42,157,143,0.08);
+      }
+      .about-hero h2 {
+        font-size: 2.6em;
+        color: #ffffff;
+        margin-bottom: 16px;
+        letter-spacing: 2px;
+        font-weight: 700;
+      }
+      .about-hero p {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #ffffff;
+        font-size: 1.18em;
+        line-height: 1.6;
+        font-weight: 500;
+      }
+      .about-mission {
+        margin: 36px auto 0 auto;
+        max-width: 820px;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(42,157,143,0.07);
+        padding: 38px 38px 28px 38px;
+        text-align: center;
+      }
+      .about-mission h3 {
+        color: #0d8f80;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+      .about-mission p {
+        color: #264653;
+        font-size: 1.09em;
+        margin-bottom: 0;
+      }
+      .about-story {
+        margin: 36px auto 0 auto;
+        max-width: 820px;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(42,157,143,0.07);
+        padding: 32px 38px 22px 38px;
+      }
+      .about-story h3 {
+        color: #0d8f80;
+        font-size: 1.3em;
+        margin-bottom: 8px;
+      }
+      .about-story p {
+        color: #264653;
+        font-size: 1.08em;
+        margin-bottom: 0;
+      }
+      .about-founders {
+        margin: 36px auto 0 auto;
+        max-width: 820px;
+        background: #e0f2f1;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(42,157,143,0.07);
+        padding: 32px 38px 22px 38px;
+      }
+      .about-founders h3 {
+        color: #0d8f80;
+        font-size: 1.3em;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+      .founder-list {
+        display: flex;
+        gap: 36px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .founder-card {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 2px 8px rgba(42,157,143,0.06);
+        padding: 18px 22px;
+        min-width: 220px;
+        max-width: 300px;
+        text-align: center;
+        flex: 1 1 220px;
+      }
+      .founder-icon {
+        font-size: 2.3em;
+        margin-bottom: 8px;
+        color: #2a9d8f;
+      }
+      .founder-name {
+        font-weight: 700;
+        color: #054841;
+        font-size: 1.1em;
+      }
+      .founder-role {
+        color: #2a9d8f;
+        font-size: 1em;
+        margin-bottom: 10px;
+      }
+      .founder-desc {
+        color: #264653;
+        font-size: 1em;
+      }
+      .about-unique {
+        margin: 36px auto 0 auto;
+        max-width: 900px;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(42,157,143,0.07);
+        padding: 36px 38px 28px 38px;
+      }
+      .about-unique h3 {
+        color: #0d8f80;
+        font-size: 1.3em;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+      .unique-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 26px;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .unique-list li {
+        background: #e0f2f1;
+        border-radius: 12px;
+        padding: 18px 20px;
+        font-size: 1.09em;
+        color: #264653;
+        min-width: 180px;
+        max-width: 250px;
+        text-align: center;
+        box-shadow: 0 1px 6px rgba(42,157,143,0.08);
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .unique-list li span {
+        font-size: 1.5em;
+        margin-bottom: 4px;
+        display: block;
+      }
+      .about-products {
+        margin: 36px auto 0 auto;
+        max-width: 900px;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(42,157,143,0.07);
+        padding: 36px 38px 28px 38px;
+      }
+      .about-products h3 {
+        color: #0d8f80;
+        font-size: 1.3em;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+      .product-tiles {
+        display: flex;
+        gap: 36px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .product-tile {
+        background: #e0f2f1;
+        border-radius: 14px;
+        box-shadow: 0 1px 6px rgba(42,157,143,0.08);
+        padding: 20px 20px 18px 20px;
+        min-width: 220px;
+        max-width: 320px;
+        text-align: center;
+        font-size: 1.08em;
+        color: #264653;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .product-tile span {
+        font-size: 2em;
+        margin-bottom: 8px;
+      }
+      .product-tile a {
+        display: inline-block;
+        margin-top: 10px;
+        color: #0d8f80;
+        text-decoration: underline;
+        font-weight: 700;
+        font-size: 0.97em;
+        transition: color 0.2s;
+      }
+      .product-tile a:hover {
+        color: #2a9d8f;
+      }
+      .about-testimonials {
+        margin: 36px auto 36px auto;
+        max-width: 820px;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(42,157,143,0.07);
+        padding: 36px 38px 28px 38px;
+      }
+      .about-testimonials h3 {
+        color: #0d8f80;
+        font-size: 1.3em;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+      .testimonial-list {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .testimonial-item {
+        background: #e0f2f1;
+        border-radius: 12px;
+        padding: 18px 20px;
+        color: #264653;
+        font-size: 1.08em;
+        font-style: italic;
+        position: relative;
+      }
+      .testimonial-item:before {
+        content: "“";
+        font-size: 2.3em;
+        color: #2a9d8f;
+        position: absolute;
+        left: 10px;
+        top: 0;
+        font-style: normal;
+      }
+      .testimonial-author {
+        display: block;
+        margin-top: 10px;
+        color: #0d8f80;
+        font-weight: 700;
+        font-size: 1em;
+        font-style: normal;
+        text-align: right;
+      }
+      @media (max-width: 900px) {
+        .about-mission, .about-story, .about-founders, .about-unique, .about-products, .about-testimonials {
+          padding: 22px 8px 18px 8px;
+        }
+        .product-tiles, .founder-list, .unique-list {
+          flex-direction: column;
+          gap: 18px;
+        }
+      }
+      @media (max-width: 600px) {
+        .about-hero h2 {
+          font-size: 1.5em;
+        }
+        .about-hero {
+          padding: 24px 0 16px 0;
+        }
+      }
+    </style>
+</head>
+<body>
+    <!-- Logo Row -->
+    <header class="main-header">
+  <div class="logo-wrapper">
+    <img src="logo.jpeg" alt="Nuevora Exports Logo" class="logo" />
+  </div>
+  <div class="header-text">
+    <h1>Nuevora Exports</h1>
+    <p>Your trusted partner in premium quality, naturally sourced products from India.</p>
+  </div>
+</header>
+
+
+    <!-- NAVBAR START -->
+    <nav class="main-navbar">
+      <div class="navbar-left">
+        <span class="contact-item">📞 91+ 8124318717</span>
+        <span class="contact-item">✉️ nuevoraexports@gmail.com</span>
+      </div>
+      <ul class="navbar-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="strength.html">Strength</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="aboutus.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <h2>About Us – Nuevora Exports</h2>
+      <p>
+        Nuevora Exports is a trusted exporter of high-quality natural products with a strong commitment to purity, sustainability, and customer satisfaction. We specialize in delivering premium-grade Virgin Coconut Oil (VCO) and Mango Pulp, sourced directly from India's finest farms and processed with care.
+      </p>
+    </section>
+    
+    <!-- Mission Section -->
+    <section class="about-mission">
+      <h3>Our Mission</h3>
+      <p>
+        Our mission is to bring the best of nature to the world while supporting ethical sourcing, fair trade, and environmental responsibility.<br>
+        We believe in transparency, trust, and tradition, combining modern techniques with age-old knowledge to deliver excellence in every drop and bite.
+      </p>
+    </section>
+
+    <!-- Story Section -->
+    <section class="about-story">
+      <h3>Our Story</h3>
+      <p>
+        Born out of a passion for natural wellness and authentic Indian produce, Nuevora Exports began with a simple idea – to connect Indian farmers with global markets. Our journey is driven by our founders’ dedication to quality, women-led leadership, and a deep-rooted commitment to integrity in trade.
+      </p>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="about-founders">
+      <h3>Meet Our Founders</h3>
+      <div class="founder-list">
+        <div class="founder-card">
+          <div class="founder-icon">👩‍💼</div>
+          <div class="founder-name">Rajani Rajesh</div>
+          <div class="founder-role">Chief Managing Director</div>
+          <div class="founder-desc">
+            With a visionary mind and a passion for excellence, Rajani oversees all operations and ensures Nuevora maintains the highest quality standards. Her leadership has guided the brand into international markets with confidence and care.
+          </div>
+        </div>
+        <div class="founder-card">
+          <div class="founder-icon">👩‍💼</div>
+          <div class="founder-name">Ranjana Rajesh</div>
+          <div class="founder-role">Managing Director</div>
+          <div class="founder-desc">
+            A dynamic force behind Nuevora’s growth, Ranjana handles business strategy and partnerships. Her commitment to sustainability and customer satisfaction is at the core of everything we do.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unique Section -->
+    <section class="about-unique">
+      <h3>What Makes Us Unique</h3>
+      <ul class="unique-list">
+        <li><span>🌿</span>100% Natural & Authentic Products</li>
+        <li><span>🏅</span>Certified Quality Standards</li>
+        <li><span>🌍</span>Strong Export Network</li>
+        <li><span>👩‍🔬</span>Modern & Hygienic Processing</li>
+        <li><span>🧭</span>Women-led Leadership</li>
+        <li><span>🌱</span>Eco-conscious Packaging & Operations</li>
+      </ul>
+      <div style="text-align:center; color:#264653; margin-top:18px; font-size:1em;">
+        Our dedication to quality and customer trust has earned us recognition from clients across Asia, the Middle East, and Europe.
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="about-products">
+      <h3>Our Products</h3>
+      <div class="product-tiles">
+        <div class="product-tile">
+          <span>🥥</span>
+          <b>Virgin Coconut Oil (VCO)</b><br>
+          Cold-pressed, pure, and chemical-free. Ideal for cooking, skin, and hair care.
+          <a href="product.html#vco">Explore VCO &rarr;</a>
+        </div>
+        <div class="product-tile">
+          <span>🥭</span>
+          <b>Mango Pulp</b><br>
+          Made from handpicked, sun-ripened mangoes – sweet, rich, and preservative-free.
+          <a href="product.html#mango">Explore Mango Pulp &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="about-testimonials">
+      <h3>Customer Testimonials</h3>
+      <ul class="testimonial-list">
+        <li class="testimonial-item">
+          The quality of their coconut oil is unmatched. It smells fresh and works wonders on skin and hair. Highly recommended!
+          <span class="testimonial-author">– Ayesha T., Dubai</span>
+        </li>
+        <li class="testimonial-item">
+          We’ve been importing mango pulp from Nuevora for two seasons – always consistent, rich flavor, and timely delivery.
+          <span class="testimonial-author">– Ben T., Singapore</span>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Nuevora Exports. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

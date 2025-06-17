@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Products | Nuevora Exports</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        background: #f9f9f9;
+      }
+      /* === Main Header: LOGO LEFT, TEXT CENTERED === */
+      .main-header {
+        position: relative;
+        background: #054841;
+        color: #fff;
+        padding: 24px 0;
+        min-height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .logo-wrapper {
+        position: absolute;
+        left: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        z-index: 2;
+      }
+      .logo {
+        height: 170px;
+        width: auto;
+        border-radius: 20px;
+        background: transparent;
+        box-shadow: none !important;
+        margin: 0;
+      }
+      .header-text {
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+      }
+      .header-text h1 {
+        margin: 0;
+        font-size: 2.3em;
+        letter-spacing: 2px;
+      }
+      .header-text p {
+        margin-top: 12px;
+        font-size: 1.1em;
+        font-weight: 400;
+      }
+      @media (max-width: 700px) {
+        .main-header {
+          flex-direction: column;
+          align-items: flex-start;
+          min-height: unset;
+          padding: 10px 0 10px 0;
+        }
+        .logo-wrapper {
+          position: static;
+          transform: none;
+          margin-bottom: 10px;
+          justify-content: center;
+          width: 100%;
+        }
+        .logo {
+          height: 48px;
+        }
+        .header-text {
+          width: 100%;
+          text-align: center;
+        }
+        .header-text h1 {
+          font-size: 1.2em;
+        }
+        .header-text p {
+          font-size: 0.95em;
+        }
+      }
+      /* --- Products Section Styles (unchanged) --- */
+      .products-main-title {
+        text-align: center;
+        font-size: 2.3em;
+        color: #054841;
+        margin: 48px 0 36px 0;
+        letter-spacing: 2px;
+        font-weight: 700;
+      }
+      .product-split-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
+        justify-content: center;
+        align-items: stretch;
+        max-width: 1200px;
+        margin: 0 auto 60px auto;
+      }
+      .product-card {
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 4px 24px rgba(42,157,143,0.09);
+        flex: 1 1 420px;
+        max-width: 500px;
+        min-width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        overflow: hidden;
+        transition: box-shadow 0.2s;
+        position: relative;
+      }
+      .product-card:hover {
+        box-shadow: 0 8px 36px rgba(42,157,143,0.17);
+      }
+      .product-img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        background: #e0f2f1;
+        border-radius: 24px 24px 0 0;
+        transition: filter 0.3s;
+      }
+      .product-card:hover .product-img {
+        filter: brightness(1.04) saturate(1.1);
+      }
+      .product-content {
+        padding: 32px 28px 26px 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .product-title {
+        font-size: 1.45em;
+        color: #0d8f80;
+        font-weight: 700;
+        margin-bottom: 6px;
+        letter-spacing: 1px;
+      }
+      .product-section-label {
+        font-weight: 700;
+        color: #2a9d8f;
+        margin-top: 18px;
+        margin-bottom: 6px;
+        font-size: 1.04em;
+        letter-spacing: 1px;
+      }
+      .product-description {
+        color: #264653;
+        font-size: 1.08em;
+        line-height: 1.6;
+        margin-bottom: 8px;
+      }
+      .product-features,
+      .product-why {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: #264653;
+        font-size: 1.04em;
+      }
+      .product-features li,
+      .product-why li {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 10px;
+      }
+      .product-features li::before {
+        content: "⭐";
+        position: absolute;
+        left: 0;
+        color: #f4b400;
+        font-size: 1.1em;
+      }
+      .product-why li::before {
+        content: "✅";
+        position: absolute;
+        left: 0;
+        color: #2a9d8f;
+        font-size: 1.1em;
+      }
+      .product-ingredients,
+      .product-nutrition {
+        background: #f1faee;
+        border-radius: 10px;
+        padding: 12px 18px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        color: #054841;
+      }
+      .product-ingredients ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .product-nutrition-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.98em;
+        margin-top: 6px;
+      }
+      .product-nutrition-table td {
+        padding: 3px 8px;
+        border: none;
+      }
+      .product-nutrition-table tr td:first-child {
+        color: #264653;
+        font-weight: 500;
+      }
+      @media (max-width: 1100px) {
+        .product-split-wrap {
+          gap: 28px;
+        }
+      }
+      @media (max-width: 900px) {
+        .product-split-wrap {
+          flex-direction: column;
+          gap: 38px;
+          align-items: center;
+        }
+        .product-card {
+          max-width: 98vw;
+        }
+      }
+      @media (max-width: 600px) {
+        .products-main-title {
+          font-size: 1.4em;
+          margin: 24px 0 18px 0;
+        }
+        .product-content {
+          padding: 18px 8px 14px 8px;
+        }
+        .product-img {
+          height: 140px;
+        }
+      }
+      /* --- Navbar and Footer styles (unchanged, add your own if needed) --- */
+      .main-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        border-bottom: 2px solid #e0f2f1;
+        box-shadow: 0 2px 12px rgba(42,157,143,0.04);
+        padding: 0 32px;
+        height: 62px;
+        position: relative;
+        z-index: 10;
+      }
+      .navbar-left {
+        display: flex;
+        gap: 24px;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 1em;
+        color: #054841;
+        font-weight: 600;
+      }
+      .contact-item {
+        white-space: nowrap;
+      }
+      .navbar-list {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .navbar-list a {
+        display: inline-block;
+        color: #054841;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 1.08em;
+        font-weight: 600;
+        text-decoration: none;
+        letter-spacing: 1px;
+        padding: 8px 2px;
+        border-bottom: 2px solid transparent;
+        transition: color 0.2s, border-color 0.2s;
+      }
+      .navbar-list a:hover,
+      .navbar-list a:focus,
+      .navbar-list a.active {
+        color: #2a9d8f;
+        border-bottom: 2px solid #2a9d8f;
+        background: rgba(42,157,143,0.07);
+        border-radius: 2px;
+      }
+      @media (max-width: 900px) {
+        .main-navbar {
+          flex-wrap: wrap;
+          height: auto;
+          padding: 12px 16px;
+          gap: 12px;
+        }
+        .navbar-left {
+          font-size: 0.9em;
+          gap: 16px;
+          margin-bottom: 8px;
+        }
+        .navbar-list {
+          gap: 16px;
+          justify-content: flex-end;
+          width: 100%;
+        }
+      }
+      @media (max-width: 600px) {
+        .main-navbar {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px 6px;
+          height: auto;
+        }
+        .navbar-left {
+          margin-bottom: 10px;
+          font-size: 0.85em;
+          gap: 10px;
+        }
+        .navbar-list {
+          gap: 10px;
+          width: 100%;
+          flex-wrap: wrap;
+          padding: 0;
+        }
+      }
+      .footer {
+        background: #054841;
+        color: #fff;
+        text-align: center;
+        padding: 25px 0;
+        font-size: 1em;
+        letter-spacing: 1px;
+        margin-top: 0;
+      }
+    </style>
+</head>
+<body>
+    <!-- Green Header Row with Logo Left, Text Centered -->
+    <header class="main-header">
+      <div class="logo-wrapper">
+        <img src="logo.jpeg" alt="Nuevora Exports Logo" class="logo" />
+      </div>
+      <div class="header-text">
+        <h1>Nuevora Exports</h1>
+        <p>Your trusted partner in premium quality, naturally sourced products from India.</p>
+      </div>
+    </header>
+
+    <!-- NAVBAR START -->
+    <nav class="main-navbar">
+      <div class="navbar-left">
+        <span class="contact-item">📞 91+ 8124318717</span>
+        <span class="contact-item">✉️ nuevoraexports@gmail.com</span>
+      </div>
+      <ul class="navbar-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="strength.html">Strength</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="product.html" class="active">Products</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <div class="products-main-title">OUR PRODUCTS</div>
+    <section class="product-split-wrap">
+      <!-- Coconut Oil Card -->
+      <div class="product-card">
+        <img src="prodcoco.jpeg" alt="Virgin Coconut Oil" class="product-img">
+        <div class="product-content">
+          <div class="product-title">Virgin Coconut Oil (VCO)</div>
+          <div class="product-section-label">📄 Description</div>
+          <div class="product-description">
+            Our Virgin Coconut Oil is extracted through a cold-pressed method from fresh, mature coconuts. It retains its natural aroma, flavor, and nutrients — making it ideal for culinary, cosmetic, and therapeutic uses. With no chemicals or heat involved in processing, it’s a pure and powerful natural product.
+          </div>
+          <div class="product-section-label">⭐ Key Features</div>
+          <ul class="product-features">
+            <li>Cold-pressed and unrefined</li>
+            <li>100% natural and chemical-free</li>
+            <li>High in lauric acid and MCTs</li>
+            <li>Light aroma with a smooth texture</li>
+            <li>Long shelf life with no preservatives</li>
+            <li>Available in food-grade and cosmetic-grade variants</li>
+            <li>Offered in customized bulk and retail packaging</li>
+          </ul>
+          <div class="product-section-label">🥥 Ingredients</div>
+          <div class="product-ingredients">
+            <ul>
+              <li>100% pure virgin coconut oil (from fresh coconut kernel)</li>
+              <li>No added chemicals, flavors, or preservatives</li>
+            </ul>
+          </div>
+          <div class="product-section-label">🍽️ Nutritional Highlights (per 100 ml approx)</div>
+          <div class="product-nutrition">
+            <table class="product-nutrition-table">
+              <tr><td>Energy:</td><td>862 kcal</td></tr>
+              <tr><td>Total Fat:</td><td>100 g</td></tr>
+              <tr><td>Saturated Fat:</td><td>92 g</td></tr>
+              <tr><td>Monounsaturated Fat:</td><td>6 g</td></tr>
+              <tr><td>Polyunsaturated Fat:</td><td>2 g</td></tr>
+              <tr><td>Cholesterol:</td><td>0 mg</td></tr>
+              <tr><td>Lauric Acid:</td><td>~45–52%</td></tr>
+            </table>
+          </div>
+          <div class="product-section-label">✅ Why Choose Nuevora Exports for VCO?</div>
+          <ul class="product-why">
+            <li>Premium-grade coconuts sourced from trusted farms</li>
+            <li>Hygienic, cold-pressed processing facility</li>
+            <li>Custom packaging & private labeling available</li>
+            <li>Fast delivery & international shipping expertise</li>
+            <li>Strict quality checks with global certifications (FSSAI, HACCP, etc.)</li>
+            <li>Transparent business practices & long-term client trust</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Mango Pulp Card -->
+      <div class="product-card">
+        <img src="prodmang.jpeg" alt="Mango Pulp" class="product-img">
+        <div class="product-content">
+          <div class="product-title">Mango Pulp (Alphonso / Totapuri)</div>
+          <div class="product-section-label">📄 Description</div>
+          <div class="product-description">
+            Our Mango Pulp is made from hand-selected, fully ripened Alphonso and Totapuri mangoes. It’s processed under hygienic conditions to preserve the fruit’s original flavor, aroma, and natural sweetness. Perfect for beverages, desserts, and culinary preparations.
+          </div>
+          <div class="product-section-label">⭐ Key Features</div>
+          <ul class="product-features">
+            <li>Made from premium fresh mangoes</li>
+            <li>Naturally sweet with no added artificial flavors</li>
+            <li>Smooth texture with vibrant color</li>
+            <li>Ideal for juices, smoothies, jams, and ice creams</li>
+            <li>Packed in aseptic bags, tins, or cans</li>
+            <li>Long shelf life and consistent quality</li>
+          </ul>
+          <div class="product-section-label">🥭 Ingredients</div>
+          <div class="product-ingredients">
+            <ul>
+              <li>Ripe Alphonso / Totapuri mangoes</li>
+              <li>Minimal citric acid (as permitted preservative, in aseptic grade only)</li>
+              <li>No added sugar (unless specified)</li>
+              <li>No artificial colors or flavors</li>
+            </ul>
+          </div>
+          <div class="product-section-label">🍽️ Nutritional Highlights (per 100 g approx)</div>
+          <div class="product-nutrition">
+            <table class="product-nutrition-table">
+              <tr><td>Energy:</td><td>70–100 kcal</td></tr>
+              <tr><td>Carbohydrates:</td><td>16–20 g</td></tr>
+              <tr><td>Sugars:</td><td>14–18 g</td></tr>
+              <tr><td>Vitamin A:</td><td>~1000 IU</td></tr>
+              <tr><td>Vitamin C:</td><td>~30 mg</td></tr>
+              <tr><td>Fat:</td><td>&lt;0.5 g</td></tr>
+              <tr><td>Fiber:</td><td>1–2 g</td></tr>
+            </table>
+          </div>
+          <div class="product-section-label">✅ Why Choose Nuevora Exports for MANGO PULP?</div>
+          <ul class="product-why">
+            <li>Sourced from the best mango belts of India</li>
+            <li>Clean and safe pulp processing units</li>
+            <li>Custom variants: sweetened, unsweetened, organic</li>
+            <li>Bulk packaging for food and beverage industries</li>
+            <li>Timely exports with documentation and quality assurance</li>
+            <li>Client-first approach with reliable global delivery</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Nuevora Exports. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

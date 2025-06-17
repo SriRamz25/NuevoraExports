@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact Us | Nuevora Exports</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background: #f9f9f9;
+        font-family: 'Montserrat', Arial, sans-serif;
+        color: #264653;
+        margin: 0;
+        padding: 0;
+      }
+      .main-header {
+  position: relative;
+  background: #054841;
+  color: #fff;
+  padding: 24px 0;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-wrapper {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.logo {
+  height: 170px;
+  width: auto;
+  border-radius: 20px;
+  background: transparent;
+  box-shadow: none !important;
+  margin: 0;
+}
+
+.header-text {
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2.3em;
+  letter-spacing: 2px;
+}
+
+.header-text p {
+  margin-top: 12px;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+      .contact-container {
+        max-width: 900px;
+        margin: 48px auto 80px auto;
+        background: #fff;
+        border-radius: 18px;
+        /* Removed box-shadow to eliminate shadow at bottom */
+        box-shadow: none;
+        padding: 36px 32px 48px 32px;
+      }
+      h2 {
+        color: #0d8f80;
+        font-size: 2.2em;
+        margin-bottom: 24px;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+      .contact-info {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 28px;
+        margin-bottom: 40px;
+      }
+      .contact-item {
+        flex: 1 1 250px;
+        padding: 0; /* remove padding */
+        text-align: left; /* align text left */
+        font-weight: 600;
+        color: #054841;
+        font-size: 1.1em;
+        background: transparent; /* remove background */
+        box-shadow: none; /* remove shadow */
+        border-radius: 0; /* remove border radius */
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        }
+
+      .contact-item span {
+        display: block;
+        font-size: 1.6em;
+        margin-bottom: 8px;
+      }
+      @media (max-width: 700px) {
+        .contact-info {
+          flex-direction: column;
+          gap: 18px;
+        }
+      }
+    </style>
+</head>
+<body>
+    <!-- Logo Row -->
+    <header class="main-header">
+  <div class="logo-wrapper">
+    <img src="logo.jpeg" alt="Nuevora Exports Logo" class="logo" />
+  </div>
+  <div class="header-text">
+    <h1>Nuevora Exports</h1>
+    <p>Your trusted partner in premium quality, naturally sourced products from India.</p>
+  </div>
+</header>
+
+
+    <!-- NAVBAR START -->
+    <nav class="main-navbar">
+      <div class="navbar-left">
+        <span class="contact-item">📞 91+ 8124318717</span>
+        <span class="contact-item">✉️ nuevoraexports@gmail.com</span>
+      </div>
+      <ul class="navbar-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="strength.html">Strength</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <main class="contact-container">
+      <h2>Contact Us</h2>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <span>📞</span>
+           91+ 8124318717<br>
+           
+           91+ 9087519097
+        </div>
+        <div class="contact-item">
+          <span>✉️</span>
+          nuevoraexports@gmail.com
+        </div>
+        <div class="contact-item">
+          <span>📍</span>
+          No 58, Office block S2, 10th Street Baba Nagar, Villivakam, Chennai - 49
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Nuevora Exports. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
