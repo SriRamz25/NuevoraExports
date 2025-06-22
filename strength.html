@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Our Strengths | Nuevora Exports</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -145,104 +144,102 @@
       }
       /* Strength List Section */
       .strength-list-section {
-        max-width: 900px;
-        margin: 80px auto 40px auto;
-        background: #fff;
-        border-radius: 18px;
-        box-shadow: 0 2px 16px rgba(42,157,143,0.07);
-        padding: 40px 32px 36px 32px;
-        position: relative;
-      }
-      .strength-list-title {
-        color: #054841;
-        font-size: 1.35em;
-        margin-bottom: 28px;
-        font-weight: 700;
-        text-align: center;
-      }
-      .strength-list {
-        list-style: none;
-        padding: 0;
-        margin: 0 auto;
-        max-width: 700px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 22px 36px;
-      }
-      .strength-list li {
-        position: relative;
-        padding-left: 40px;
-        color: #264653;
-        font-size: 1.08em;
-        font-weight: 500;
-        line-height: 1.5;
-        display: flex;
-        align-items: flex-start;
-      }
-      .strength-list li::before {
-        content: "💪";
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-size: 1.22em;
-        color: #2a9d8f;
-      }
-      .strength-list li:nth-child(2)::before { content: "🌐"; }
-      .strength-list li:nth-child(3)::before { content: "🔗"; }
-      .strength-list li:nth-child(4)::before { content: "🎯"; }
-      .strength-list li:nth-child(5)::before { content: "🔎"; }
-      .strength-list li:nth-child(6)::before { content: "⚡"; }
-      .strength-list li:nth-child(7)::before { content: "💲"; }
-      .strength-list li:nth-child(8)::before { content: "🏆"; }
-      /* Responsive */
-      @media (max-width: 1100px) {
-        .strength-hero-content {
-          padding: 38px 18px 32px 24px;
-        }
-        .strength-hero-img-float {
-          right: 12px;
-        }
-      }
-      @media (max-width: 900px) {
-        .strength-hero-wrap {
-          flex-direction: column;
-          align-items: center;
-          margin: 32px 0 0 0;
-        }
-        .strength-hero-img {
-          margin-right: 0;
-          margin-bottom: -60px;
-          border-radius: 28px 28px 0 0;
-        }
-        .strength-hero-content {
-          border-radius: 0 0 28px 28px;
-          padding: 38px 12px 32px 24px;
-          min-width: 0;
-        }
-        .strength-hero-img-float {
-          position: static;
-          margin: 24px auto 0 auto;
-          display: block;
-        }
-        .strength-list-section {
-          margin: 70px 4px 28px 4px;
-          padding: 24px 8px 20px 8px;
-        }
-      }
-      @media (max-width: 700px) {
-        .strength-list {
-          grid-template-columns: 1fr;
-          gap: 14px 0;
-        }
-      }
-      @media (max-width: 500px) {
-        .strength-hero-img img {
-          min-height: 120px;
-        }
-        .strength-hero-content {
-          padding: 18px 2vw 18px 2vw;
-        }
-      }
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 40px 20px;
+    position: relative;
+  }
+  
+  .strength-list-title-wrap {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .strength-list-title {
+    color: #054841;
+    font-size: 2.2em;
+    margin: 0 0 15px 0;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+  }
+  
+  .title-decoration {
+    height: 4px;
+    width: 80px;
+    background: linear-gradient(90deg, #0d8f80, #2a9d8f);
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+  
+  .strength-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .strength-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 5px 15px rgba(13, 143, 128, 0.08);
+    border: 1px solid #e0f2f1;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .strength-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(13, 143, 128, 0.12);
+  }
+  
+  .strength-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0d8f80, #2a9d8f);
+  }
+  
+  .strength-icon {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0d8f80;
+  }
+  
+  .strength-card-title {
+    color: #054841;
+    font-size: 1.25em;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+  }
+  
+  .strength-card-text {
+    color: #264653;
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .strength-cards-container {
+      grid-template-columns: 1fr;
+      padding: 0 10px;
+    }
+    
+    .strength-list-title {
+      font-size: 1.8em;
+    }
+    
+    .strength-card {
+      padding: 25px 20px;
+    }
+  }
     </style>
 </head>
 <body>
@@ -267,7 +264,7 @@
       <ul class="navbar-list">
         <li><a href="index.html">Home</a></li>
         <li><a href="strength.html" class="active">Strength</a></li>
-        <li><a href="service.html">Service</a></li>
+        <li><a href="service.html">Our Promise</a></li>
         <li><a href="product.html">Product</a></li>
         <li><a href="aboutus.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -285,7 +282,7 @@
       <div class="strength-hero-content">
         <h2>Our Strength</h2>
         <div class="strength-quote">
-          "Our strength is the ability to consistently deliver with integrity, speed, and unmatched attention to detail".
+          "At Nuevora Exports, our strength lies in the hands of Indian farmers – the true custodians of purity and taste"
         </div>
         <!-- Floating accent image -->
         <div class="strength-hero-img-float">
@@ -296,18 +293,69 @@
 
     <!-- Strength List Section -->
     <section class="strength-list-section">
-      <div class="strength-list-title">Why Choose Nuevora Exports?</div>
-      <ul class="strength-list">
-        <li>In-depth knowledge of international trade and logistics</li>
-        <li>Robust network of verified suppliers and logistics partners</li>
-        <li>Consistency in product quality and service delivery</li>
-        <li>Transparent communication and ethical business practices</li>
-        <li>Fast response time and client-focused approach</li>
-        <li>Flexibility to adapt to changing client demands</li>
-        <li>Competitive pricing with no compromise on quality</li>
-        <li>Proven track record by satisfying global clients</li>
-      </ul>
-    </section>
+  <div class="strength-list-title-wrap">
+    <h2 class="strength-list-title">Why Choose Nuevora Exports?</h2>
+    <div class="title-decoration"></div>
+  </div>
+  
+  <div class="strength-cards-container">
+    <!-- Card 1 -->
+    <div class="strength-card">
+      <div class="strength-icon">🌾</div>
+      <h3 class="strength-card-title">Sourced Directly from Indian Farms</h3>
+      <p class="strength-card-text">We partner with trusted Indian coconut and mango farmers to ensure authenticity and traceability.</p>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="strength-card">
+      <div class="strength-icon">🧴</div>
+      <h3 class="strength-card-title">Purity & Freshness Guaranteed</h3>
+      <p class="strength-card-text">Cold-pressed VCO and naturally ripened mangoes are processed with minimal intervention to retain maximum nutrients.</p>
+    </div>
+    
+    <!-- Card 3 -->
+    <div class="strength-card">
+      <div class="strength-icon">🛡️</div>
+      <h3 class="strength-card-title">Stringent Quality Control</h3>
+      <p class="strength-card-text">Every batch undergoes rigorous quality checks to meet international food safety and export standards.</p>
+    </div>
+    
+    <!-- Card 4 -->
+    <div class="strength-card">
+      <div class="strength-icon">🧼</div>
+      <h3 class="strength-card-title">Hygienic Processing</h3>
+      <p class="strength-card-text">Our facilities follow world-class hygiene protocols to preserve natural taste, color, and nutrition.</p>
+    </div>
+    
+    <!-- Card 5 -->
+    <div class="strength-card">
+      <div class="strength-icon">📦</div>
+      <h3 class="strength-card-title">Customizable Packaging</h3>
+      <p class="strength-card-text">From retail-ready jars to large-scale drums and aseptic packaging – we adapt to your business needs.</p>
+    </div>
+    
+    <!-- Card 6 -->
+    <div class="strength-card">
+      <div class="strength-icon">📆</div>
+      <h3 class="strength-card-title">Year-Round Availability</h3>
+      <p class="strength-card-text">Efficient sourcing and storage allow us to supply mango pulp and VCO consistently, regardless of season.</p>
+    </div>
+    
+    <!-- Card 7 -->
+    <div class="strength-card">
+      <div class="strength-icon">🚫</div>
+      <h3 class="strength-card-title">Zero Additives</h3>
+      <p class="strength-card-text">Our products contain no preservatives, artificial flavoring, or chemicals – just pure tropical goodness.</p>
+    </div>
+    
+    <!-- Card 8 -->
+    <div class="strength-card">
+      <div class="strength-icon">🌍</div>
+      <h3 class="strength-card-title">Trusted by Global Buyers</h3>
+      <p class="strength-card-text">Our VCO and mango pulp are already exported to several countries, backed by client satisfaction and repeat orders.</p>
+    </div>
+  </div>
+</section>
 
     <footer class="footer">
         <p>&copy; 2025 Nuevora Exports. All Rights Reserved.</p>
