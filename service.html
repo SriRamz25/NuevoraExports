@@ -2,87 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Our Services | Nuevora Exports</title>
+    <title>Our Strengths | Nuevora Exports</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
       body {
         background: #f9f9f9;
       }
-      /* === Main Header: LOGO LEFT, TEXT CENTERED === */
       .main-header {
-        position: relative;
-        background: #054841;
-        color: #fff;
-        padding: 24px 0;
-        min-height: 120px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .logo-wrapper {
-        position: absolute;
-        left: 32px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        align-items: center;
-        z-index: 2;
-      }
-      .logo {
-        height: 170px;
-        width: auto;
-        border-radius: 20px;
-        background: transparent;
-        box-shadow: none !important;
-        margin: 0;
-      }
-      .header-text {
-        width: 100%;
-        text-align: center;
-        z-index: 1;
-      }
-      .header-text h1 {
-        margin: 0;
-        font-size: 2.3em;
-        letter-spacing: 2px;
-      }
-      .header-text p {
-        margin-top: 12px;
-        font-size: 1.1em;
-        font-weight: 400;
-      }
-      @media (max-width: 700px) {
-        .main-header {
-          flex-direction: column;
-          align-items: flex-start;
-          min-height: unset;
-          padding: 10px 0 10px 0;
-        }
-        .logo-wrapper {
-          position: static;
-          transform: none;
-          margin-bottom: 10px;
-          justify-content: center;
-          width: 100%;
-        }
-        .logo {
-          height: 48px;
-        }
-        .header-text {
-          width: 100%;
-          text-align: center;
-        }
-        .header-text h1 {
-          font-size: 1.2em;
-        }
-        .header-text p {
-          font-size: 0.95em;
-        }
-      }
+  position: relative;
+  background: #054841;
+  color: #fff;
+  padding: 24px 0;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-wrapper {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.logo {
+  height: 170px;
+  width: auto;
+  border-radius: 20px;
+  background: transparent;
+  box-shadow: none !important;
+  margin: 0;
+}
+
+.header-text {
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2.3em;
+  letter-spacing: 2px;
+}
+
+.header-text p {
+  margin-top: 12px;
+  font-size: 1.1em;
+  font-weight: 400;
+}
       /* Hero Section */
-      .service-hero-wrap {
+      .strength-hero-wrap {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
@@ -92,7 +67,7 @@
         position: relative;
         z-index: 1;
       }
-      .service-hero-img {
+      .strength-hero-img {
         flex: 1 1 340px;
         min-width: 280px;
         max-width: 480px;
@@ -104,7 +79,7 @@
         align-items: center;
         justify-content: center;
       }
-      .service-hero-img img {
+      .strength-hero-img img {
         width: 100%;
         height: 100%;
         min-height: 280px;
@@ -112,10 +87,10 @@
         filter: brightness(0.93) contrast(1.06);
         transition: filter 0.3s;
       }
-      .service-hero-img img:hover {
+      .strength-hero-img img:hover {
         filter: brightness(1) contrast(1.13) saturate(1.1);
       }
-      .service-hero-content {
+      .strength-hero-content {
         flex: 2 1 480px;
         background: #0d8f80;
         border-radius: 0 28px 28px 0;
@@ -129,13 +104,13 @@
         min-width: 320px;
         max-width: 700px;
       }
-      .service-hero-content h2 {
+      .strength-hero-content h2 {
         margin: 0 0 12px 0;
         font-size: 2.2em;
         letter-spacing: 2px;
         color: #fff;
       }
-      .service-quote {
+      .strength-quote {
         font-size: 1.18em;
         font-style: italic;
         color: #e0f2f1;
@@ -144,7 +119,7 @@
         text-shadow: 0 2px 10px #05484144;
       }
       /* Floating accent image */
-      .service-hero-img-float {
+      .strength-hero-img-float {
         position: absolute;
         bottom: -30px;
         right: 38px;
@@ -158,225 +133,126 @@
         z-index: 10;
         transition: transform 0.3s;
       }
-      .service-hero-img-float img {
+      .strength-hero-img-float img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 14px;
       }
-      .service-hero-img-float:hover {
+      .strength-hero-img-float:hover {
         transform: scale(1.07) rotate(2deg);
       }
-      /* Service List Section */
-      .service-list-section {
-        max-width: 900px;
-        margin: 80px auto 40px auto;
-        background: #fff;
-        border-radius: 18px;
-        box-shadow: 0 2px 16px rgba(42,157,143,0.07);
-        padding: 40px 32px 36px 32px;
-        position: relative;
-      }
-      .service-list-title {
-        color: #054841;
-        font-size: 1.35em;
-        margin-bottom: 28px;
-        font-weight: 700;
-        text-align: center;
-      }
-      .service-list {
-        list-style: none;
-        padding: 0;
-        margin: 0 auto;
-        max-width: 700px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 22px 36px;
-      }
-      .service-list li {
-        position: relative;
-        padding-left: 40px;
-        color: #264653;
-        font-size: 1.08em;
-        font-weight: 500;
-        line-height: 1.5;
-        display: flex;
-        align-items: flex-start;
-      }
-      .service-list li::before {
-        content: "🚚";
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-size: 1.22em;
-        color: #2a9d8f;
-      }
-      .service-list li:nth-child(2)::before { content: "📦"; }
-      .service-list li:nth-child(3)::before { content: "🏷️"; }
-      .service-list li:nth-child(4)::before { content: "❄️"; }
-      .service-list li:nth-child(5)::before { content: "⏱️"; }
-      .service-list li:nth-child(6)::before { content: "📑"; }
-      .service-list li:nth-child(7)::before { content: "🤝"; }
-      /* Responsive */
-      @media (max-width: 1100px) {
-        .service-hero-content {
-          padding: 38px 18px 32px 24px;
-        }
-        .service-hero-img-float {
-          right: 12px;
-        }
-      }
-      @media (max-width: 900px) {
-        .service-hero-wrap {
-          flex-direction: column;
-          align-items: center;
-          margin: 32px 0 0 0;
-        }
-        .service-hero-img {
-          margin-right: 0;
-          margin-bottom: -60px;
-          border-radius: 28px 28px 0 0;
-        }
-        .service-hero-content {
-          border-radius: 0 0 28px 28px;
-          padding: 38px 12px 32px 24px;
-          min-width: 0;
-        }
-        .service-hero-img-float {
-          position: static;
-          margin: 24px auto 0 auto;
-          display: block;
-        }
-        .service-list-section {
-          margin: 70px 4px 28px 4px;
-          padding: 24px 8px 20px 8px;
-        }
-      }
-      @media (max-width: 700px) {
-        .service-list {
-          grid-template-columns: 1fr;
-          gap: 14px 0;
-        }
-      }
-      @media (max-width: 500px) {
-        .service-hero-img img {
-          min-height: 120px;
-        }
-        .service-hero-content {
-          padding: 18px 2vw 18px 2vw;
-        }
-      }
-      /* --- Navbar and Footer styles (unchanged, add your own if needed) --- */
-      .main-navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: #fff;
-        border-bottom: 2px solid #e0f2f1;
-        box-shadow: 0 2px 12px rgba(42,157,143,0.04);
-        padding: 0 32px;
-        height: 62px;
-        position: relative;
-        z-index: 10;
-      }
-      .navbar-left {
-        display: flex;
-        gap: 24px;
-        font-family: 'Montserrat', Arial, sans-serif;
-        font-size: 1em;
-        color: #054841;
-        font-weight: 600;
-      }
-      .contact-item {
-        white-space: nowrap;
-      }
-      .navbar-list {
-        display: flex;
-        align-items: center;
-        gap: 28px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-      .navbar-list a {
-        display: inline-block;
-        color: #054841;
-        font-family: 'Montserrat', Arial, sans-serif;
-        font-size: 1.08em;
-        font-weight: 600;
-        text-decoration: none;
-        letter-spacing: 1px;
-        padding: 8px 2px;
-        border-bottom: 2px solid transparent;
-        transition: color 0.2s, border-color 0.2s;
-      }
-      .navbar-list a:hover,
-      .navbar-list a:focus,
-      .navbar-list a.active {
-        color: #2a9d8f;
-        border-bottom: 2px solid #2a9d8f;
-        background: rgba(42,157,143,0.07);
-        border-radius: 2px;
-      }
-      @media (max-width: 900px) {
-        .main-navbar {
-          flex-wrap: wrap;
-          height: auto;
-          padding: 12px 16px;
-          gap: 12px;
-        }
-        .navbar-left {
-          font-size: 0.9em;
-          gap: 16px;
-          margin-bottom: 8px;
-        }
-        .navbar-list {
-          gap: 16px;
-          justify-content: flex-end;
-          width: 100%;
-        }
-      }
-      @media (max-width: 600px) {
-        .main-navbar {
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 10px 6px;
-          height: auto;
-        }
-        .navbar-left {
-          margin-bottom: 10px;
-          font-size: 0.85em;
-          gap: 10px;
-        }
-        .navbar-list {
-          gap: 10px;
-          width: 100%;
-          flex-wrap: wrap;
-          padding: 0;
-        }
-      }
-      .footer {
-        background: #054841;
-        color: #fff;
-        text-align: center;
-        padding: 25px 0;
-        font-size: 1em;
-        letter-spacing: 1px;
-        margin-top: 0;
-      }
+      /* Strength List Section */
+      .strength-list-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 40px 20px;
+    position: relative;
+  }
+  
+  .strength-list-title-wrap {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .strength-list-title {
+    color: #054841;
+    font-size: 2.2em;
+    margin: 0 0 15px 0;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+  }
+  
+  .title-decoration {
+    height: 4px;
+    width: 80px;
+    background: linear-gradient(90deg, #0d8f80, #2a9d8f);
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+  
+  .strength-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .strength-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 5px 15px rgba(13, 143, 128, 0.08);
+    border: 1px solid #e0f2f1;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .strength-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(13, 143, 128, 0.12);
+  }
+  
+  .strength-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0d8f80, #2a9d8f);
+  }
+  
+  .strength-icon {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0d8f80;
+  }
+  
+  .strength-card-title {
+    color: #054841;
+    font-size: 1.25em;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+  }
+  
+  .strength-card-text {
+    color: #264653;
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .strength-cards-container {
+      grid-template-columns: 1fr;
+      padding: 0 10px;
+    }
+    
+    .strength-list-title {
+      font-size: 1.8em;
+    }
+    
+    .strength-card {
+      padding: 25px 20px;
+    }
+  }
     </style>
 </head>
 <body>
-    <!-- Green Header Row with Logo Left, Text Centered -->
-    <header class="main-header">
-      <div class="logo-wrapper">
-        <img src="logo.jpeg" alt="Nuevora Exports Logo" class="logo" />
-      </div>
-      <div class="header-text">
-        <h1>Nuevora Exports</h1>
-        <p>Your trusted partner in premium quality, naturally sourced products from India.</p>
-      </div>
-    </header>
+     <!-- Logo Row -->
+   <header class="main-header">
+  <div class="logo-wrapper">
+    <img src="logo.jpeg" alt="Nuevora Exports Logo" class="logo" />
+  </div>
+  <div class="header-text">
+    <h1>Nuevora Exports</h1>
+    <p>Your trusted partner in premium quality, naturally sourced products from India.</p>
+  </div>
+</header>
 
     <!-- NAVBAR START -->
     <nav class="main-navbar">
@@ -387,7 +263,7 @@
       <ul class="navbar-list">
         <li><a href="index.html">Home</a></li>
         <li><a href="strength.html">Strength</a></li>
-        <li><a href="service.html" class="active">Service</a></li>
+        <li><a href="service.html" class="active">Our Promise</a></li>
         <li><a href="product.html">Product</a></li>
         <li><a href="aboutus.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -396,37 +272,83 @@
     <!-- NAVBAR END -->
 
     <!-- Creative Service Hero Section -->
-    <section class="service-hero-wrap">
+    <!-- Creative Strength Hero Section -->
+    <section class="strength-hero-wrap">
       <!-- Main left image -->
-      <div class="service-hero-img">
-        <img src="serviceimg2.jpeg" alt="Quality Inspection">
+      <div class="strength-hero-img">
+        <img src="promise1.jpeg" alt="Strength Visual 1">
       </div>
       <!-- Main card with text and floating image -->
-      <div class="service-hero-content">
-        <h2>Our Services</h2>
-        <div class="service-quote">
-          "We provide reliable export services that ensure your products meet international standards from source to shipment."
+      <div class="strength-hero-content">
+        <h2>Our Promise</h2>
+        <div class="strength-quote">
+          "Pure origins. Honest processes. Trusted quality – that’s our promise to you."
         </div>
         <!-- Floating accent image -->
-        <div class="service-hero-img-float">
-          <img src="serviceimg1.jpeg" alt="Export Logistics">
+        <div class="strength-hero-img-float">
+          <img src="promise2.jpeg" alt="Strength Visual 2">
         </div>
       </div>
     </section>
 
-    <!-- Service List Section -->
-    <section class="service-list-section">
-      <div class="service-list-title">What We Offer</div>
-      <ul class="service-list">
-        <li>Strict quality control and inspection at every stage</li>
-        <li>Custom packaging solutions tailored to client requirements</li>
-        <li>Private labeling and branding options</li>
-        <li>Temperature-controlled storage and shipping (if needed)</li>
-        <li>Timely and safe international delivery</li>
-        <li>Complete export documentation and compliance handling</li>
-        <li>Dedicated customer support and tracking assistance</li>
-      </ul>
-    </section>
+     <!-- Strength List Section -->
+    <section class="strength-list-section">
+  <div class="strength-list-title-wrap">
+    <h2 class="strength-list-title">What's Our Promise</h2>
+    <div class="title-decoration"></div>
+  </div>
+  
+  <div class="strength-cards-container">
+    <!-- Card 1 -->
+    <div class="strength-card">
+      <div class="strength-icon">🥥</div>
+      <h3 class="strength-card-title">Pure Virgin Coconut Oil, Naturally Extracted:</h3>
+      <p class="strength-card-text">Cold-pressed and chemical-free, our VCO retains its full nutritional value and aroma – just as nature intended.</p>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="strength-card">
+      <div class="strength-icon">🥭</div>
+      <h3 class="strength-card-title">Golden Mango Pulp, Straight from Indian Orchards:</h3>
+      <p class="strength-card-text">We use only fully ripened mangoes, handpicked and processed with care to preserve the authentic taste of India.</p>
+    </div>
+    
+    <!-- Card 3 -->
+    <div class="strength-card">
+      <div class="strength-icon">❌</div>
+      <h3 class="strength-card-title">No Additives, No Preservatives – Always Natural:</h3>
+      <p class="strength-card-text">Both our VCO and mango pulp are 100% natural with no artificial colors, flavors, or stabilizers.</p>
+    </div>
+    
+    <!-- Card 4 -->
+    <div class="strength-card">
+      <div class="strength-icon">	🕵️</div>
+      <h3 class="strength-card-title">Strict Quality Checks at Every Stage:</h3>
+      <p class="strength-card-text">From raw sourcing to final packaging, each product undergoes multiple rounds of inspection to meet international food safety standards.</p>
+    </div>
+    
+    <!-- Card 5 -->
+    <div class="strength-card">
+      <div class="strength-icon">📦</div>
+      <h3 class="strength-card-title">Custom Packaging to Suit Your Market:</h3>
+      <p class="strength-card-text">Whether it’s glass jars, pouches, or bulk drums – we offer packaging options tailored to your business needs.</p>
+    </div>
+    
+    <!-- Card 6 -->
+    <div class="strength-card">
+      <div class="strength-icon">🌿</div>
+      <h3 class="strength-card-title">Flavor, Freshness, and Integrity – Sealed In:</h3>
+      <p class="strength-card-text">We promise that every bottle of VCO and every pack of mango pulp reflects our commitment to authenticity, hygiene, and care</p>
+    </div>
+    
+    <!-- Card 7 -->
+    <div class="strength-card">
+      <div class="strength-icon">🔍</div>
+      <h3 class="strength-card-title">Strict Quality Checks at Every Stage:</h3>
+      <p class="strength-card-text">From raw sourcing to final packaging, each product undergoes multiple rounds of inspection to meet international food safety standards.</p>
+    </div>
+  </div>
+</section>
 
     <footer class="footer">
         <p>&copy; 2025 Nuevora Exports. All Rights Reserved.</p>
