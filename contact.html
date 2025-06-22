@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us | Nuevora Exports</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
@@ -127,12 +126,42 @@
         font-size: 1.6em;
         margin-bottom: 8px;
       }
-      @media (max-width: 700px) {
-        .contact-info {
-          flex-direction: column;
-          gap: 18px;
-        }
-      }
+      /* Responsive Design */
+@media (max-width: 900px) {
+  .contact-visual-content {
+    flex-direction: column;
+    padding: 20px 8px;
+    gap: 18px;
+  }
+  .contact-visual-details {
+    width: 100%;
+    margin-bottom: 22px;
+  }
+  .contact-visual-grid {
+    flex-direction: column;
+    gap: 0;
+  }
+  .contact-visual-image {
+    width: 100%;
+    margin-top: 12px;
+  }
+  .contact-visual-image img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 18px 0 10px 0;
+  }
+  .main-header .logo {
+    margin: 0 0 12px 0;
+    height: 70px;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -157,7 +186,7 @@
       <ul class="navbar-list">
         <li><a href="index.html">Home</a></li>
         <li><a href="strength.html">Strength</a></li>
-        <li><a href="service.html">Service</a></li>
+        <li><a href="service.html">Our Promise</a></li>
         <li><a href="product.html">Products</a></li>
         <li><a href="aboutus.html">About Us</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
@@ -171,9 +200,9 @@
       <div class="contact-info">
         <div class="contact-item">
           <span>📞</span>
-           91+ 8124318717<br>
+           91+ 81243 18717<br>
            
-           91+ 9087519097
+           91+ 90875 19097
         </div>
         <div class="contact-item">
           <span>✉️</span>
